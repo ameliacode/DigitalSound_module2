@@ -3,30 +3,20 @@ import _pickle as cPickle
 import numpy as np
 from scipy.io.wavfile import read
 from speakerfeatures import extract_features
+from inputDataFiles  import inputFile
 import warnings
 warnings.filterwarnings("ignore")
 import time
 
 #샘플 파일의 총 갯수를 입력합니다
-#total_num = int(input("Input total number of test samples: "))
-
-#테스트할 샘플 파일 목록 작성 함수
-def inputFile(test_file, path_dir, num ):
-    f= open(test_file, "w")
-    file_list = os.listdir(path_dir)
-    file_list_wav = [file for file in file_list if file.endswith(".wav")]
-    for i in range(0,num):
-        f.write(file_list_wav[i]+"\n")
-    f.close()
+total_num = int(input("Input total number of test samples: "))
 
 #path to training data
 source   = "C:\\Users\\user\\PycharmProjects\\Module2\\sampleTest\\"
 modelpath = "C:\\Users\\user\\PycharmProjects\\Module2\\"
 test_file = "development_set_test.txt"
 
-inputFile(test_file, source, 144)              #테스트 파일 목록화
-
-print("All sample test files listed")
+inputFile(test_file, source, total_num)              #테스트 파일 목록화
 
 file_paths = open(test_file,'r')
 
