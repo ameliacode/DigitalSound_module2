@@ -8,4 +8,7 @@ If you want to test it out, make sure you have to change "absolute address" into
 Code Changes: check issue #2<br>
 
 **MFCC_graph.py**: MFCC graph drawling code<br><br>
-Still writing down readme.md
+
+2020.01.26  
+Will update functions  
+Still writing down readme.md  
