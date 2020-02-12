@@ -29,26 +29,26 @@ We want to provide personal service for each family member by using AI speaker u
 I have looked up the code from this [blog](https://appliedmachinelearning.blog/2017/11/14/spoken-speaker-identification-based-on-gaussian-mixture-models-python-implementation/) and applied to my project.   
 Image down below is a flow chart how the code works in total. <br><br>
 <p align = "center">
-<img src = "./img/python_code_explain.png"></img>
+<img src = "./img/python_code_explain.png", height = 400></img>
 </p>
 
 ### Code Description
 **train_model.py**  
 
-* Input: folder name of training data 
+* Input: folder name of training data (folder has to exists in executing directory)
 * Output: speaker_name.gmm
 
 **test_model.py**
-* Input: total number of test data and folder name of test data
+* Input: total number of test data and folder name of test data (folder has to exists in executing directory)
 * Output: identified speaker names
   
 **show_all_graphs.py**  
 Mel Spectogram, MFCC, GMM graphs.
 <p align = "center">
-<img src = "./img/Mel_spectogram.png", height = 200></img>
-<img src = "./img/MFCC.png", height = 200></img>
-<img src = "./img/GaussianClustered.png", width = 535></img>
-<img src = "./img/GaussianModel.png", height = 200></img>
+<img src = "./img/Mel_spectogram.png", height = 300></img>
+<img src = "./img/MFCC.png", height = 300></img>
+<img src = "./img/GaussianClustered.png", width = 735></img>
+<img src = "./img/GaussianModel.png", height = 300></img>
 </p>
 
 
