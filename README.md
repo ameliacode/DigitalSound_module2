@@ -29,7 +29,7 @@ We want to provide personal service for each family member by using AI speaker u
 I have looked up the code from this [blog](https://appliedmachinelearning.blog/2017/11/14/spoken-speaker-identification-based-on-gaussian-mixture-models-python-implementation/) and applied to my project.   
 Image down below is a flow chart how the code works in total. <br><br>
 <p align = "center">
-<img src = "./img/python_code_explain.png", height = 400></img>
+<img src = "./img/python_code_explain.png", height = 450></img>
 </p>
 
 ### Code Description
