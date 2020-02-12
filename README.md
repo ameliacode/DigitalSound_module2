@@ -47,7 +47,7 @@ Mel Spectogram, MFCC, GMM graphs.
 <p align = "center">
 <img src = "./img/Mel_spectogram.png", height = 300></img>
 <img src = "./img/MFCC.png", height = 300></img>
-<img src = "./img/GaussianClustered.png", width = 735></img>
+<img src = "./img/GaussianClustered.png", width = 835></img>
 <img src = "./img/GaussianModel.png", height = 300></img>
 </p>
 
