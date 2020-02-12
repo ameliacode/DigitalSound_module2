@@ -1,3 +1,4 @@
+import os
 import _pickle as cPickle
 import numpy as np
 from scipy.io.wavfile import read
@@ -8,17 +9,19 @@ import warnings
 warnings.filterwarnings("ignore")
 
 #path to training data
-source   = "C:\\Users\\user\\PycharmProjects\\Module2\\trainData\\"
+file_name = input("Input training data folder name: ")
+train_num = int("Input the number of training data set")
+source = os.path.join(os.getcwd(), file_name)
 
 #path where training speakers will be saved
-dest = "C:\\Users\\user\\PycharmProjects\\Module2\\"
+dest = os.getcwd()
 train_file = "development_set_enroll.txt"
 
-inputFile(train_file, source, 156)
+inputFile(train_file, source, train_num)
 file_paths = open(train_file,'r')
 
-count = 1 #주어진 모델 데이터는 하나 밖에 없으므로
-# Extracting features for each speaker (5 files per speakers)
+count = 1
+# Extracting features for each speaker (13 files per speakers)
 features = np.asarray(())
 for path in file_paths:
     path = path.strip()
@@ -37,11 +40,11 @@ for path in file_paths:
     # when features of 1 files of speaker are concatenated, then do model training
 
     if count == 13:
-        gmm = GaussianMixture(n_components = 16, covariance_type='diag',n_init = 3)
-        gmm.fit(features)
+        gmm = GaussianMixture(n_components = 16, covariance_type='diag',n_init = 3)     #n_components = the number of mixture components, n_init = initialization
+        gmm.fit(features) #추출된 특징들 토대로 EM 알고리즘을 통해 모델 파라미터 측정
 
         # dumping the trained gaussian model
-        picklefile = path.split("9.wav")[0]+".gmm"
+        picklefile = path.split(".wav")[0]+".gmm"
         cPickle.dump(gmm,open(dest + picklefile,'wb'))
         print('+ modeling completed for speaker:',picklefile," with data point = ",features.shape)
         features = np.asarray(())

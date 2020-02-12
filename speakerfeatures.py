@@ -11,8 +11,8 @@ def extract_features(audio,rate):
     """extract 20 dim mfcc features from an audio, performs CMS and combines
     delta to make it 40 dim feature vector"""
 
-    mfcc_feat = mfcc.mfcc(audio,rate, 0.025, 0.01,20,appendEnergy = True)
+    mfcc_feat = mfcc.mfcc(audio,rate, 0.025, 0.01, 20, appendEnergy = True) #winlen=0.025, #winstep=0.01 #number of cepstrum to return=20
     mfcc_feat = preprocessing.scale(mfcc_feat)
-    delta = calculate_delta(mfcc_feat)
+    delta = calculate_delta(mfcc_feat) #compute delta feature from a feature vector sequence
     combined = np.hstack((mfcc_feat,delta))
     return combined
