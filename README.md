@@ -55,7 +55,7 @@ Mel Spectogram, MFCC, GMM graphs.
 #### Minor issues
 issues | solutions
 ---|---  
-IO library problems | Sometimes io library has problem with reading wav files. You have to get rid of implicit metadata in a wav file. Using [ffmpeg](www.ffmpeg.org) is one way.  
+IO library problems | Sometimes io library has a problem with reading wav files. You have to get rid of implicit metadata in a wav file. Using [ffmpeg](www.ffmpeg.org) is one way.  
 Unicode problems | Try adding "utf-8" when reading wav files
 
 ---
