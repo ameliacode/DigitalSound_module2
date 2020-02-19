@@ -12,22 +12,22 @@ Implementing voice recognition that is used in AI speakers
 Recognizing speaker's voice
 
 ### Principle & Theory
-Distinguishing Speaker's voice patterns in that every person have different voice feature.
+Distinguishing Speaker's voice patterns in that every person have different voice feature
 
 ## Problem
-We want to provide personal service for each family member by using AI speaker using **Speaker Recognition**.  
+We want to provide personal service for each family member by AI speaker using **Speaker Recognition**  
 
 ### Setting data
 * Collect 12 students' audio data. Each of the audio data has to read the given script and record with coolEdit(WAV, 16000Hz, 16-bit, mono).
-* After collecting the data, use them as training data. 
-* All data will be shared with classmates.  
+* After collecting the data, use them as training data 
+* All data will be shared with classmates  
 
 **All data that have used for training models will NOT be OPENED to PUBLIC due to privacy issues**
 
 ---
 ## Solution
-I have looked up the code from this [blog](https://appliedmachinelearning.blog/2017/11/14/spoken-speaker-identification-based-on-gaussian-mixture-models-python-implementation/) and applied to my project.   
-Image down below is a flow chart how the code works in total. <br><br>
+I have looked up the code from this [blog](https://appliedmachinelearning.blog/2017/11/14/spoken-speaker-identification-based-on-gaussian-mixture-models-python-implementation/) and applied to my project   
+Image down below is a flow chart how the code works in total <br><br>
 <p align = "center">
 <img src = "./img/python_code_explain.png", height = 450></img>
 </p>
@@ -55,7 +55,7 @@ Mel Spectogram, MFCC, GMM graphs.
 #### Minor issues
 issues | solutions
 ---|---  
-IO library problems | Sometimes io library has a problem with reading wav files. You have to get rid of implicit metadata in a wav file. Using [ffmpeg](www.ffmpeg.org) is one way.  
+IO library problems | Not very often, io library has some problems with reading wav files. Before inputting the wav, you have to get rid of implicit metadata in wav files. Using [ffmpeg](www.ffmpeg.org) is one way.  
 Unicode problems | Try adding "utf-8" when reading wav files
 
 ---
