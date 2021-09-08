@@ -1,20 +1,20 @@
-# Digital Sound module2
+## Digital Sound module2
 
-## Introduction
+#### Introduction
 This project is a module #2 of Digital Sound lecture: Speaker Recognition  
 
-## Learning Objective
+#### Learning Objective
 Implementing voice recognition that is used in AI speakers 
 
-## Content
+### Content
 
-### Topic
+#### Topic
 Recognizing speaker's voice
 
-### Principle & Theory
+#### Principle & Theory
 Distinguishing Speaker's voice patterns in that every person have different voice feature
 
-## Problem
+### Problem
 We want to provide personal service for each family member by AI speaker using **Speaker Recognition**  
 
 ### Setting data
